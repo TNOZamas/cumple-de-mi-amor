@@ -53,7 +53,7 @@ export default function SubmitGreetingPage() {
     <section className="min-h-screen w-full py-16 px-4 flex flex-col items-center justify-center">
       <div className="w-full max-w-lg rounded-3xl border border-amber-400/30 bg-[#0d0a1a]/90 p-8 backdrop-blur-2xl shadow-2xl">
         <div className="text-center mb-6 space-y-2">
-          <MessageChip>Para el cumple de Tatiana 🎂</MessageChip>
+          <MessageChip>Para el cumple de Tati</MessageChip>
           <h2 className="font-title text-2xl font-bold text-amber-100">
             Déjale un Saludo Especial
           </h2>
@@ -166,7 +166,7 @@ export default function SubmitGreetingPage() {
               rows={3}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="Escribe tu mensaje para Tatiana..."
+              placeholder="Escribe tu mensaje para Tati..."
               className="w-full rounded-xl border border-amber-500/30 bg-black/40 px-4 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none"
             />
           </div>
@@ -196,7 +196,7 @@ export default function SubmitGreetingPage() {
               </h3>
               <p className="font-body text-xs text-amber-100/80 leading-relaxed">
                 Tu mensaje y recuerdo han sido agregados al muro cósmico para
-                Tatiana.
+                Tati.
               </p>
               <CosmosButton
                 onClick={() => router.push("/saludos")}

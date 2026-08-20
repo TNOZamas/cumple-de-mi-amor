@@ -42,7 +42,7 @@ export default function GreetingsWallClient({
       <div className="text-center mb-10 space-y-3 max-w-xl">
         <MessageChip>Muro Cósmico de Cumpleaños</MessageChip>
         <h2 className="font-title text-3xl md:text-4xl font-bold text-amber-100">
-          Saludos para Tatiana
+          Saludos para Tati
         </h2>
         <div className="pt-2">
           <Link href="/saludos/enviar">

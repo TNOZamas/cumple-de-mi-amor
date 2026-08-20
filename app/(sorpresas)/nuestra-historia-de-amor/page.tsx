@@ -21,7 +21,8 @@ const STORY_MOMENTS: StoryMoment[] = [
     title: "El día que nuestras vidas coincidieron",
     description:
       "Aún recuerdo la primera vez que te vi. El universo conspiró a nuestro favor para cruzarnos en el momento exacto. Desde ese instante, supe que serías alguien completamente inolvidable.",
-    imageSrc: "/assets/images/nosotros-background.jpg",
+    imageSrc:
+      "https://ausfwldochwwgubghyid.supabase.co/storage/v1/object/public/saludos-media/casita_mc.jpg",
     imageCaption: "Nuestro primer momento juntos",
     rotation: "-rotate-2",
   },
@@ -30,8 +31,9 @@ const STORY_MOMENTS: StoryMoment[] = [
     date: "Momentos mágicos",
     title: "Tu sonrisa iluminando mi mundo",
     description:
-      "Gracias por cada risa compartida, por los abrazos que lo curan todo y por regalarme tu tiempo de la forma más pura y bonita que existe.",
-    imageSrc: "/assets/images/nosotros-background.jpg",
+      "Gracias por cada risa compartida, por los besitos que lo curan todo y por regalarme tu tiempo de la forma más pura y bonita que existe.",
+    imageSrc:
+      "https://ausfwldochwwgubghyid.supabase.co/storage/v1/object/public/saludos-media/lunita_mc.jpg",
     imageCaption: "Inmortalizando recuerdos",
     rotation: "rotate-3",
   },

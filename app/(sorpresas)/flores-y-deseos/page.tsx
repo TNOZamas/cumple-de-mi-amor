@@ -21,7 +21,7 @@ export default function FlowersPage() {
 
       <div className="w-full max-w-xl space-y-8 z-10">
         {/* BLOQUE PRINCIPAL DE LAS ROSAS */}
-        <CosmosCard title="Feliz Cumpleaños Tatiana">
+        <CosmosCard title="Feliz Cumpleaños Tati">
           <div className="flex flex-col items-center text-center space-y-6 py-4">
             <motion.div
               animate={{ y: [0, -8, 0], scale: [1, 1.03, 1] }}
@@ -52,7 +52,7 @@ export default function FlowersPage() {
 
             <div className="pt-4 border-t border-amber-400/20 w-full flex flex-col items-center gap-1">
               <span className="font-title text-lg font-bold text-rose-300">
-                ¡Te amo infinitamente, Tatiana! ❤️
+                ¡Te amo infinitamente, Tati! ❤️
               </span>
               <span className="font-chip text-xs text-amber-200/60 uppercase tracking-widest">
                 Por siempre y para siempre ✦

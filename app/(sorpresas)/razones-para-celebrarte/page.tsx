@@ -99,9 +99,7 @@ export default function ReasonsPage() {
               >
                 {/* 1. CARA FRONTAL (Oculta el mensaje) */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border border-amber-400/40 bg-[#0d0a1a]/90 p-6 backdrop-blur-xl backface-hidden shadow-[0_0_20px_rgba(245,158,11,0.15)] group-hover:border-amber-400 group-hover:shadow-[0_0_30px_rgba(251,191,36,0.3)] transition-all">
-                  <span className="text-4xl mb-3 animate-bounce">
-                    {item.icon}
-                  </span>
+                  <span className="text-4xl mb-3">{item.icon}</span>
                   <h3 className="font-title text-lg font-bold text-amber-200 text-center">
                     {item.title}
                   </h3>

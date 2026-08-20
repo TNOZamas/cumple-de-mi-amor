@@ -5,9 +5,9 @@ import StarryBackground from "./components/layout/StarryBackground";
 
 export const metadata: Metadata = {
   title: "Feliz Cumple Mi Amor",
-  description: "App para felicitar a mi amor en su cumpleaños Tatiana",
+  description: "App para felicitar a mi amor en su cumpleaños Tati",
   icons: {
-    icon: "/icon.svg", // O /favicon.ico si usas una imagen tradicional
+    icon: "/icon.svg",
   },
 };
 

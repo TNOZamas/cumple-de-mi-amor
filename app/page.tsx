@@ -13,7 +13,7 @@ export default function Home() {
         <div className="relative h-56 w-full overflow-hidden rounded-2xl border border-amber-500/20">
           <img
             src="/assets/images/nosotros-background.jpg"
-            alt="Para Tatiana"
+            alt="Para Tati"
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-linear-to-t from-[#0d0a1a] via-transparent to-transparent" />
@@ -21,7 +21,7 @@ export default function Home() {
 
         {/* Cuerpo del Mensaje */}
         <div className="mt-6 flex flex-col items-center text-center space-y-4">
-          <MessageChip>Para mi niña hermosa, Tatiana</MessageChip>
+          <MessageChip>Para mi niña hermosa, Tati</MessageChip>
 
           <h2 className="font-title text-xl md:text-2xl font-bold text-amber-100 tracking-wide">
             ¡Hoy el universo celebra tu vida!

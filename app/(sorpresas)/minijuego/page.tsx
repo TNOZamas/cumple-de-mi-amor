@@ -18,22 +18,25 @@ const SURPRISES: SurpriseItem[] = [
     id: 1,
     title: "Mensaje de Voz Secreto #1",
     type: "audio",
-    mediaUrl: "/assets/audio/mensaje1.mp3",
+    mediaUrl:
+      "https://ausfwldochwwgubghyid.supabase.co/storage/v1/object/public/saludos-media/Audio1.m4a",
     challengeType: "quiz",
   },
   {
     id: 2,
-    title: "Video Especial de Cumpleaños",
-    type: "video",
-    mediaUrl: "/assets/video/especial.mp4",
-    challengeType: "clicks",
+    title: "Mensaje de Voz Secreto #2",
+    type: "audio",
+    mediaUrl:
+      "https://ausfwldochwwgubghyid.supabase.co/storage/v1/object/public/saludos-media/Audio2.m4a",
+    challengeType: "word",
   },
   {
     id: 3,
-    title: "Mensaje de Voz Secreto #2",
-    type: "audio",
-    mediaUrl: "/assets/audio/mensaje2.mp3",
-    challengeType: "word",
+    title: "Video Especial de Cumpleaños",
+    type: "video",
+    mediaUrl:
+      "https://ausfwldochwwgubghyid.supabase.co/storage/v1/object/public/saludos-media/video3.mov",
+    challengeType: "clicks",
   },
 ];
 
@@ -83,7 +86,6 @@ export default function MinigamePage() {
             >
               {!isUnlocked ? (
                 <div className="flex flex-col items-center justify-center h-full w-full space-y-4">
-                  <span className="text-5xl animate-pulse">🔒</span>
                   <h3 className="font-title text-base font-bold text-amber-200">
                     {item.title}
                   </h3>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { CosmosButton } from "@/app/components/ui/CosmosButton";
 import { MessageChip } from "@/app/components/ui/MessageChip";
@@ -16,30 +16,51 @@ interface PhotoMemory {
 const MEMORIES: PhotoMemory[] = [
   {
     id: 1,
-    src: "/assets/images/nosotros-background.jpg",
-    title: "Nuestro Primer Viaje Juntos",
+    src: "https://ausfwldochwwgubghyid.supabase.co/storage/v1/object/public/saludos-media/primera_aventura.jpg",
+    title: "Nuestra Primera Aventura Juntos",
     date: "Un día inolvidable",
-    note: "Recuerdo perfectamente la risa que nos dio perdernos en el camino. Contigo hasta perderse es el mejor plan.",
+    note: "Recuerdo perfectamente la risa que nos dio perdernos en el camino a casa. Contigo hasta perderse es el mejor plan.",
   },
   {
     id: 2,
-    src: "/assets/images/nosotros-background.jpg",
-    title: "Esa Cena Especial",
+    src: "https://ausfwldochwwgubghyid.supabase.co/storage/v1/object/public/saludos-media/hermosa_sonrisa.jpg",
+    title: "Esa Foto Especial",
     date: "Noche mágica",
-    note: "Mirarte a los ojos bajo la luz tenue y saber que no quería estar en ningún otro lugar del mundo.",
+    note: "Ver tu sonrisa en esa foto me recuerda que los momentos más simples a tu lado son los que más atesoro.",
   },
   {
     id: 3,
-    src: "/assets/images/nosotros-background.jpg",
-    title: "Tardes de Abrazos",
+    src: "https://ausfwldochwwgubghyid.supabase.co/storage/v1/object/public/saludos-media/besos_hermosos.gif",
+    title: "Tardes de Besos y Risas",
     date: "Cosas cotidianas",
-    note: "Mis momentos favoritos no siempre son lujosos; son así, juntos en el sillón sin hacer nada particular.",
+    note: "Mis momentos favoritos no siempre son lujosos; son así, juntos compartiendo risas y besos en la tranquilidad de nuestras sillas.",
   },
 ];
 
+const AUDIO_URL =
+  "https://ausfwldochwwgubghyid.supabase.co/storage/v1/object/public/saludos-media/musica-amor.mp3";
+
 export default function SongAndMemoriesPage() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoMemory | null>(null);
+
+  const togglePlay = () => {
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      // Si la canción está en el inicio (menos del segundo 20), salta directamente al segundo 20
+      if (audioRef.current.currentTime < 20) {
+        audioRef.current.currentTime = 20;
+      }
+
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  };
 
   return (
     <section className="relative min-h-screen w-full py-20 px-4 flex flex-col items-center justify-center">
@@ -56,6 +77,13 @@ export default function SongAndMemoriesPage() {
       </div>
 
       <div className="w-full max-w-3xl flex flex-col items-center gap-10">
+        {/* Etiqueta de audio oculta que conecta con Supabase */}
+        <audio
+          ref={audioRef}
+          src={AUDIO_URL}
+          onEnded={() => setIsPlaying(false)}
+        />
+
         {/* 1. REPRODUCTOR CÓSMICO DE MÚSICA */}
         <div className="w-full max-w-md rounded-3xl border border-amber-400/30 bg-[#0d0a1a]/85 p-6 backdrop-blur-2xl shadow-[0_0_30px_rgba(245,158,11,0.15)] flex flex-col items-center gap-4">
           <div className="relative h-28 w-28 rounded-full border-2 border-amber-400/50 p-1 shadow-[0_0_20px_rgba(251,191,36,0.3)]">
@@ -83,13 +111,13 @@ export default function SongAndMemoriesPage() {
               Nuestra Canción Favorita
             </h3>
             <p className="font-body text-xs text-amber-100/60 mt-0.5">
-              Dedicatoria para Tatiana
+              Dedicatoria para Tati
             </p>
           </div>
 
-          {/* Botón Play / Pause */}
+          {/* Botón Play / Pause conectado a la función togglePlay */}
           <CosmosButton
-            onClick={() => setIsPlaying(!isPlaying)}
+            onClick={togglePlay}
             variant={isPlaying ? "secondary" : "primary"}
             className="w-full"
           >
