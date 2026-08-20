@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  /* Tonos de Fondo y Superficie */
+  --color-starry-bg: #03010a;
+  --color-starry-card: #0b071e;
+  --color-starry-card-border: #2a1b4e;
+
+  /* Resplandores y Acentos de Luz */
+  --color-starry-pink: #f472b6;
+  --color-starry-purple: #9333ea;
+  --color-starry-violet: #7c3aed;
+
+  /* Textos y Modificadores */
+  --color-starry-text-muted: #c084fc;
+}
+
+@theme inline {
+  --font-title: var(--font-title), serif;
+  --font-body: var(--font-body), sans-serif;
+  --font-chip: var(--font-chip), sans-serif;
+}
+
+@utility perspective-1000 {
+  perspective: 1000px;
+}
+
+@utility transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+@utility backface-hidden {
+  backface-visibility: hidden;
+}
+
+@utility rotate-y-180 {
+  transform: rotateY(180deg);
+}
